@@ -300,12 +300,49 @@ Here is a table of algorithms, the figure, name of the algorithm in the book and
 | 7.15   | PL-FC-Entails?                    | `pl_fc_entails`               | Logic | [`logic.py`][logic]             | Done | Included |
 | 7.17   | DPLL-Satisfiable?                 | `dpll_satisfiable`            | Logic | [`logic.py`][logic]             | Done | Included |
 | 7.18   | WalkSAT                           | `WalkSAT`                     | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.19   | GSAT                              | `GSAT`                        | Logic | [`logic.py`][logic]             |      |          |
+| 7.19a  | Simulated-Annealing-SAT           | `simulated_annealing_sat`     | Logic | [`logic.py`][logic]             |      |          |
+| 7.19b  | Beam-Search-SAT                   | `beam_search_sat`             | Logic | [`logic.py`][logic]             |      |          |
 | 7.20   | Hybrid-Wumpus-Agent               | `HybridWumpusAgent`           | Logic |                                 |      |          |
+| 7.21   | Model-Checking                    | `model_checking`              | Logic | [`logic.py`][logic]             |      |          |
 | 7.22   | SATPlan                           | `SAT_plan`                    | Logic | [`logic.py`][logic]             | Done | Included |
+| 8.1    | Horn-Clause-Resolution            | `horn_resolution`             | Logic | [`logic.py`][logic]             |      |          |
+| 8.2    | Forward-Chaining-Horn             | `forward_chaining_horn`       | Logic | [`logic.py`][logic]             |      |          |
+| 8.3    | Backward-Chaining-Horn            | `backward_chaining_horn`      | Logic | [`logic.py`][logic]             |      |          |
 | 9      | Subst                             | `subst`                       | Logic | [`logic.py`][logic]             | Done | Included |
 | 9.1    | Unify                             | `unify`                       | Logic | [`logic.py`][logic]             | Done | Included |
 | 9.3    | FOL-FC-Ask                        | `fol_fc_ask`                  | Logic | [`logic.py`][logic]             | Done | Included |
 | 9.6    | FOL-BC-Ask                        | `fol_bc_ask`                  | Logic | [`logic.py`][logic]             | Done | Included |
+| 9.7    | FOL-Resolution                    | `fol_resolution`              | Logic | [`logic.py`][logic]             |      |          |
+| 9.8    | Skolemization                     | `skolemize`                   | Logic | [`logic.py`][logic]             |      |          |
+| 9.9    | Herbrand-Universe                 | `herbrand_universe`           | Logic | [`logic.py`][logic]             |      |          |
+| 9.10   | Paramodulation                    | `paramodulation`              | Logic | [`logic.py`][logic]             |      |          |
+| 9.11   | Subsumption                       | `subsumption`                 | Logic | [`logic.py`][logic]             |      |          |
+| 9.12   | Demodulation                      | `demodulation`                | Logic | [`logic.py`][logic]             |      |          |
+| 9.13   | Unification-With-Occurs-Check     | `unify_occurs_check`          | Logic | [`logic.py`][logic]             |      |          |
+| 9.14   | Most-General-Unifier              | `mgu`                         | Logic | [`logic.py`][logic]             |      |          |
+| 9.15   | Answer-Extraction                 | `answer_extraction`           | Logic | [`logic.py`][logic]             |      |          |
+| 9.16   | **Natural-Deduction** 🎓          | `natural_deduction`           | Logic | [`proof_theory.py`][proof]      |      |          |
+| 9.17   | **Sequent-Calculus** 🎓           | `sequent_calculus`            | Logic | [`proof_theory.py`][proof]      |      |          |
+| 9.18   | Proof-Normalization               | `proof_normalize`             | Logic | [`proof_theory.py`][proof]      |      |          |
+| 9.19   | Proof-Search                      | `proof_search`                | Logic | [`proof_theory.py`][proof]      |      |          |
+| 9.20   | **Lambda-Calculus** 🎓            | `lambda_calculus`             | Logic | [`type_theory.py`][types]       |      |          |
+| 9.21   | Beta-Reduction                    | `beta_reduction`              | Logic | [`type_theory.py`][types]       |      |          |
+| 9.22   | Alpha-Conversion                  | `alpha_conversion`            | Logic | [`type_theory.py`][types]       |      |          |
+| 9.23   | Eta-Conversion                    | `eta_conversion`              | Logic | [`type_theory.py`][types]       |      |          |
+| 9.24   | **Type-Inference** 🎓             | `type_inference`              | Logic | [`type_theory.py`][types]       |      |          |
+| 9.25   | **Hindley-Milner** 🎓             | `hindley_milner`              | Logic | [`type_theory.py`][types]       |      |          |
+| 9.26   | Type-Checking                     | `type_check`                  | Logic | [`type_theory.py`][types]       |      |          |
+| 9.27   | **Curry-Howard-Isomorphism** 🌟🎓 | `curry_howard`                | Logic | [`type_theory.py`][types]       |      |          |
+| 9.28   | Proof-Terms                       | `proof_terms`                 | Logic | [`type_theory.py`][types]       |      |          |
+| 9.29   | Propositions-As-Types             | `propositions_as_types`       | Logic | [`type_theory.py`][types]       |      |          |
+| 9.30   | Programs-As-Proofs                | `programs_as_proofs`          | Logic | [`type_theory.py`][types]       |      |          |
+| 9.31   | Intuitionistic-Logic              | `intuitionistic_logic`        | Logic | [`proof_theory.py`][proof]      |      |          |
+| 9.32   | Constructive-Proof                | `constructive_proof`          | Logic | [`proof_theory.py`][proof]      |      |          |
+| 9.33   | Linear-Logic                      | `linear_logic`                | Logic | [`proof_theory.py`][proof]      |      |          |
+| 9.34   | Simply-Typed-Lambda-Calculus      | `stlc`                        | Logic | [`type_theory.py`][types]       |      |          |
+| 9.35   | System-F                          | `system_f`                    | Logic | [`type_theory.py`][types]       |      |          |
+| 9.36   | Dependent-Types                   | `dependent_types`             | Logic | [`type_theory.py`][types]       |      |          |
 | 10.1   | Air-Cargo-problem                 | `air_cargo`                   | Planning | [`planning.py`][planning]       | Done | Included |
 | 10.2   | Spare-Tire-Problem                | `spare_tire`                  | Planning | [`planning.py`][planning]       | Done | Included |
 | 10.3   | Three-Block-Tower                 | `three_block_tower`           | Planning | [`planning.py`][planning]       | Done | Included |
@@ -586,6 +623,8 @@ Many thanks for contributions over the years. I got bug reports, corrected code,
 [knowledge]:../master/knowledge.py
 [learning]:../master/learning.py
 [logic]:../master/logic.py
+[proof]:../master/proof_theory.py
+[types]:../master/type_theory.py
 [mdp]:../master/mdp.py
 [nlp]:../master/nlp.py
 [planning]:../master/planning.py
