@@ -253,147 +253,147 @@ And you are good to go!
 
 Here is a table of algorithms, the figure, name of the algorithm in the book and in the repository, and the file where they are implemented in the repository. This chart was made for the third edition of the book and is being updated for the upcoming fourth edition. Empty implementations are a good place for contributors to look for an issue. The [aima-pseudocode](https://github.com/aimacode/aima-pseudocode) project describes all the algorithms from the book. An asterisk next to the file name denotes the algorithm is not fully implemented. Another great place for contributors to start is by adding tests and writing on the notebooks. You can see which algorithms have tests and notebook sections below. If the algorithm you want to work on is covered, don't worry! You can still add more tests and provide some examples of use in the notebook!
 
-| **Figure** | **Name (in 4<sup>th</sup> edition)** | **Name (in repository)** | **File** | **Tests** | **Notebook**
-|:-------|:----------------------------------|:------------------------------|:--------------------------------|:-----|:---------|
-| 2      | Random-Vacuum-Agent               | `RandomVacuumAgent`           | [`agents.py`][agents]           | Done | Included |
-| 2      | Model-Based-Vacuum-Agent          | `ModelBasedVacuumAgent`       | [`agents.py`][agents]           | Done | Included |
-| 2.1    | Environment                       | `Environment`                 | [`agents.py`][agents]           | Done | Included |
-| 2.1    | Agent                             | `Agent`                       | [`agents.py`][agents]           | Done | Included |
-| 2.3    | Table-Driven-Vacuum-Agent         | `TableDrivenVacuumAgent`      | [`agents.py`][agents]           | Done | Included |
-| 2.7    | Table-Driven-Agent                | `TableDrivenAgent`            | [`agents.py`][agents]           | Done | Included |
-| 2.8    | Reflex-Vacuum-Agent               | `ReflexVacuumAgent`           | [`agents.py`][agents]           | Done | Included |
-| 2.10   | Simple-Reflex-Agent               | `SimpleReflexAgent`           | [`agents.py`][agents]           | Done | Included |
-| 2.12   | Model-Based-Reflex-Agent          | `ReflexAgentWithState`        | [`agents.py`][agents]           | Done | Included |
-| 3      | Problem                           | `Problem`                     | [`search.py`][search]           | Done | Included |
-| 3      | Node                              | `Node`                        | [`search.py`][search]           | Done | Included |
-| 3      | Queue                             | `Queue`                       | [`utils.py`][utils]             | Done | No Need  |
-| 3.1    | Simple-Problem-Solving-Agent      | `SimpleProblemSolvingAgent`   | [`search.py`][search]           | Done | Included |
-| 3.2    | Romania                           | `romania`                     | [`search.py`][search]           | Done | Included |
-| 3.7    | Tree-Search                       | `depth/breadth_first_tree_search`                 | [`search.py`][search]           | Done | Included |
-| 3.7    | Graph-Search                      | `depth/breadth_first_graph_search`                | [`search.py`][search]           | Done | Included |
-| 3.11   | Breadth-First-Search              | `breadth_first_graph_search`  | [`search.py`][search]           | Done | Included |
-| 3.14   | Uniform-Cost-Search               | `uniform_cost_search`         | [`search.py`][search]           | Done | Included |
-| 3.17   | Depth-Limited-Search              | `depth_limited_search`        | [`search.py`][search]           | Done | Included |
-| 3.18   | Iterative-Deepening-Search        | `iterative_deepening_search`  | [`search.py`][search]           | Done | Included |
-| 3.22   | Best-First-Search                 | `best_first_graph_search`     | [`search.py`][search]           | Done | Included |
-| 3.24   | A\*-Search                        | `astar_search`                | [`search.py`][search]           | Done | Included |
-| 3.26   | Recursive-Best-First-Search       | `recursive_best_first_search` | [`search.py`][search]           | Done | Included |
-| 4.2    | Hill-Climbing                     | `hill_climbing`               | [`search.py`][search]           | Done | Included |
-| 4.5    | Simulated-Annealing               | `simulated_annealing`         | [`search.py`][search]           | Done | Included |
-| 4.8    | Genetic-Algorithm                 | `genetic_algorithm`           | [`search.py`][search]           | Done | Included |
-| 4.11   | And-Or-Graph-Search               | `and_or_graph_search`         | [`search.py`][search]           | Done | Included |
-| 4.21   | Online-DFS-Agent                  | `online_dfs_agent`            | [`search.py`][search]           | Done | Included |
-| 4.24   | LRTA\*-Agent                      | `LRTAStarAgent`               | [`search.py`][search]           | Done | Included |
-| 5.3    | Minimax-Decision                  | `minimax_decision`            | [`games.py`][games]             | Done | Included |
-| 5.7    | Alpha-Beta-Search                 | `alphabeta_search`            | [`games.py`][games]             | Done | Included |
-| 6      | CSP                               | `CSP`                         | [`csp.py`][csp]                 | Done | Included |
-| 6.3    | AC-3                              | `AC3`                         | [`csp.py`][csp]                 | Done | Included |
-| 6.5    | Backtracking-Search               | `backtracking_search`         | [`csp.py`][csp]                 | Done | Included |
-| 6.8    | Min-Conflicts                     | `min_conflicts`               | [`csp.py`][csp]                 | Done | Included |
-| 6.11   | Tree-CSP-Solver                   | `tree_csp_solver`             | [`csp.py`][csp]                 | Done | Included |
-| 7      | KB                                | `KB`                          | [`logic.py`][logic]             | Done | Included |
-| 7.1    | KB-Agent                          | `KB_AgentProgram`             | [`logic.py`][logic]             | Done | Included |
-| 7.7    | Propositional Logic Sentence      | `Expr`                        | [`utils.py`][utils]             | Done | Included |
-| 7.10   | TT-Entails                        | `tt_entails`                  | [`logic.py`][logic]             | Done | Included |
-| 7.12   | PL-Resolution                     | `pl_resolution`               | [`logic.py`][logic]             | Done | Included |
-| 7.14   | Convert to CNF                    | `to_cnf`                      | [`logic.py`][logic]             | Done | Included |
-| 7.15   | PL-FC-Entails?                    | `pl_fc_entails`               | [`logic.py`][logic]             | Done | Included |
-| 7.17   | DPLL-Satisfiable?                 | `dpll_satisfiable`            | [`logic.py`][logic]             | Done | Included |
-| 7.18   | WalkSAT                           | `WalkSAT`                     | [`logic.py`][logic]             | Done | Included |
-| 7.20   | Hybrid-Wumpus-Agent               | `HybridWumpusAgent`           |                                 |      |          |
-| 7.22   | SATPlan                           | `SAT_plan`                    | [`logic.py`][logic]             | Done | Included |
-| 9      | Subst                             | `subst`                       | [`logic.py`][logic]             | Done | Included |
-| 9.1    | Unify                             | `unify`                       | [`logic.py`][logic]             | Done | Included |
-| 9.3    | FOL-FC-Ask                        | `fol_fc_ask`                  | [`logic.py`][logic]             | Done | Included |
-| 9.6    | FOL-BC-Ask                        | `fol_bc_ask`                  | [`logic.py`][logic]             | Done | Included |
-| 10.1   | Air-Cargo-problem                 | `air_cargo`                   | [`planning.py`][planning]       | Done | Included |
-| 10.2   | Spare-Tire-Problem                | `spare_tire`                  | [`planning.py`][planning]       | Done | Included |
-| 10.3   | Three-Block-Tower                 | `three_block_tower`           | [`planning.py`][planning]       | Done | Included |
-| 10.7   | Cake-Problem                      | `have_cake_and_eat_cake_too`  | [`planning.py`][planning]       | Done | Included |
-| 10.9   | Graphplan                         | `GraphPlan`                   | [`planning.py`][planning]       | Done | Included |
-| 10.13  | Partial-Order-Planner             | `PartialOrderPlanner`         | [`planning.py`][planning]       | Done | Included |
-| 11.1   | Job-Shop-Problem-With-Resources   | `job_shop_problem`            | [`planning.py`][planning]       | Done | Included |
-| 11.5   | Hierarchical-Search               | `hierarchical_search`         | [`planning.py`][planning]       | Done | Included |
-| 11.8   | Angelic-Search                    | `angelic_search`              | [`planning.py`][planning]       | Done | Included |
-| 11.10  | Doubles-tennis                    | `double_tennis_problem`       | [`planning.py`][planning]       | Done | Included |
-| 13     | Discrete Probability Distribution | `ProbDist`                    | [`probability.py`][probability] | Done | Included |
-| 13.1   | DT-Agent                          | `DTAgent`                     | [`probability.py`][probability] | Done | Included |
-| 14.9   | Enumeration-Ask                   | `enumeration_ask`             | [`probability.py`][probability] | Done | Included |
-| 14.11  | Elimination-Ask                   | `elimination_ask`             | [`probability.py`][probability] | Done | Included |
-| 14.13  | Prior-Sample                      | `prior_sample`                | [`probability.py`][probability] | Done | Included |
-| 14.14  | Rejection-Sampling                | `rejection_sampling`          | [`probability.py`][probability] | Done | Included |
-| 14.15  | Likelihood-Weighting              | `likelihood_weighting`        | [`probability.py`][probability] | Done | Included |
-| 14.16  | Gibbs-Ask                         | `gibbs_ask`                   | [`probability.py`][probability] | Done | Included |
-| 15.4   | Forward-Backward                  | `forward_backward`            | [`probability.py`][probability] | Done | Included |
-| 15.6   | Fixed-Lag-Smoothing               | `fixed_lag_smoothing`         | [`probability.py`][probability] | Done | Included |
-| 15.17  | Particle-Filtering                | `particle_filtering`          | [`probability.py`][probability] | Done | Included |
-| 16.9   | Information-Gathering-Agent       | `InformationGatheringAgent`   | [`probability.py`][probability] | Done | Included |
-| 17.4   | Value-Iteration                   | `value_iteration`             | [`mdp.py`][mdp]                 | Done | Included |
-| 17.7   | Policy-Iteration                  | `policy_iteration`            | [`mdp.py`][mdp]                 | Done | Included |
-| 17.9   | POMDP-Value-Iteration             | `pomdp_value_iteration`       | [`mdp.py`][mdp]                 | Done | Included |
-| 18.5   | Decision-Tree-Learning            | `DecisionTreeLearner`         | [`learning.py`][learning]       | Done | Included |
-| 18.8   | Cross-Validation                  | `cross_validation`            | [`learning.py`][learning]\*     |      |          |
-| 18.11  | Decision-List-Learning            | `DecisionListLearner`         | [`learning.py`][learning]\*     |      |          |
-| 18.24  | Back-Prop-Learning                | `BackPropagationLearner`      | [`learning.py`][learning]       | Done | Included |
-| 18.34  | AdaBoost                          | `AdaBoost`                    | [`learning.py`][learning]       | Done | Included |
-| 18.35 | **Adam-Optimizer** 🌟 | `Adam` | [`optimizers.py`][opt] | Kingma & Ba (2014) | 建議 |
-| 19.2   | Current-Best-Learning             | `current_best_learning`       | [`knowledge.py`](knowledge.py)  | Done | Included |
-| 19.3   | Version-Space-Learning            | `version_space_learning`      | [`knowledge.py`](knowledge.py)  | Done | Included |
-| 19.8   | Minimal-Consistent-Det            | `minimal_consistent_det`      | [`knowledge.py`](knowledge.py)  | Done | Included |
-| 19.12  | FOIL                              | `FOIL_container`              | [`knowledge.py`](knowledge.py)  | Done | Included |
-| 21.2   | Passive-ADP-Agent                 | `PassiveADPAgent`             | [`rl.py`][rl]                   | Done | Included |
-| 21.4   | Passive-TD-Agent                  | `PassiveTDAgent`              | [`rl.py`][rl]                   | Done | Included |
-| 21.8   | Q-Learning-Agent                  | `QLearningAgent`              | [`rl.py`][rl]                   | Done | Included |
-| 21.9 | **Deep-Q-Network (DQN)** 🌟 | `DQN` | [`deep_rl.py`][drl] | Mnih et al. (2015) | 高優先級 |
-| 21.12 | Double-DQN | `double_dqn` | [`deep_rl.py`][drl] | van Hasselt et al. (2015) | 建議 |
-| 21.15 | **Policy-Gradient** 🌟 | `policy_gradient` | [`deep_rl.py`][drl] | Sutton et al. (2000) | 高優先級 |
-| 21.18 | **A3C** | `A3C` | [`deep_rl.py`][drl] | Mnih et al. (2016) | 建議 |
-| 21.19 | **PPO** 🌟 | `PPO` | [`deep_rl.py`][drl] | Schulman et al. (2017) | 高優先級 |
-| 21.21 | Soft-Actor-Critic | `SAC` | [`deep_rl.py`][drl] | Haarnoja et al. (2018) | 建議 |
-| 21.22 | **AlphaZero-MCTS** 🌟 | `alphazero_mcts` | [`games_rl.py`][grl] | Silver et al. (2017) | 高優先級 |
-| 22.1   | HITS                              | `HITS`                        | [`nlp.py`][nlp]                 | Done | Included |
-| 23     | Chart-Parse                       | `Chart`                       | [`nlp.py`][nlp]                 | Done | Included |
-| 23.5   | CYK-Parse                         | `CYK_parse`                   | [`nlp.py`][nlp]                 | Done | Included |
-| 23.6 | **Word2Vec** 🌟 | `word2vec` | [`embeddings.py`][emb] | Mikolov et al. (2013) | 建議 |
-| 23.9 | **GloVe** | `glove` | [`embeddings.py`][emb] | Pennington et al. (2014) | 建議 |
-| 23.11 | **ELMo** | `elmo` | [`embeddings.py`][emb] | Peters et al. (2018) | 建議 |
-| 23.13 | **Tokenization-BPE** | `bpe_tokenizer` | [`tokenizers.py`][tok] | Sennrich et al. (2016) | 建議 |
-| 24.9 | **YOLO** 🌟 | `YOLO` | [`object_detection.py`][od] | Redmon et al. (2016) | 高優先級 |
-| 24.12 | Faster-R-CNN | `faster_rcnn` | [`object_detection.py`][od] | Ren et al. (2015) | 建議 |
-| 24.13 | **Mask-R-CNN** 🌟 | `mask_rcnn` | [`segmentation.py`][seg] | He et al. (2017) | 建議 |
-| 24.16 | **U-Net** | `unet` | [`segmentation.py`][seg] | Ronneberger et al. (2015) | 建議 |
-| 25.9   | Monte-Carlo-Localization          | `monte_carlo_localization`    | [`probability.py`][probability] | Done | Included |
-| 26.1 | Convolutional-Neural-Network | `CNN` | [`deep_learning.py`][dl] | LeCun (1998) | 建議 |
-| 26.6 | **ResNet-Block** 🌟 | `residual_block` | [`deep_learning.py`][dl] | He et al. (2015) | 建議 |
-| 27.6 | **Scaled-Dot-Product-Attention** 🌟 | `scaled_dot_product_attention` | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 |
-| 27.7 | **Multi-Head-Attention** 🌟 | `multi_head_attention` | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 |
-| 27.8 | **Transformer-Encoder** 🌟 | `transformer_encoder` | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 |
-| 27.9 | **Transformer-Decoder** 🌟 | `transformer_decoder` | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 |
-| 28.1 | **BERT-Pretraining** 🌟 | `bert_pretrain` | [`language_models.py`][lm] | Devlin et al. (2018) | 高優先級 |
-| 28.4 | **GPT-Architecture** 🌟 | `gpt_model` | [`language_models.py`][lm] | Radford et al. (2018) | 高優先級 |
-| 28.8 | **Few-Shot-Learning** 🌟 | `few_shot_learning` | [`language_models.py`][lm] | Brown et al. (2020) | 高優先級 |
-| 28.10 | **Chain-of-Thought-Prompting** | `chain_of_thought` | [`language_models.py`][lm] | Wei et al. (2022) | 建議 |
-| 28.11 | **RLHF** 🌟 | `rlhf` | [`language_models.py`][lm] | Christiano et al. (2017) | 建議 |
-| 28.13 | **Retrieval-Augmented-Generation** | `rag` | [`language_models.py`][lm] | Lewis et al. (2020) | 建議 |
-| 29.2 | Variational-Autoencoder | `VAE` | [`generative.py`][gen] | Kingma & Welling (2013) | 建議 |
-| 29.4 | **GAN-Architecture** 🌟 | `GAN` | [`generative.py`][gen] | Goodfellow et al. (2014) | 高優先級 |
-| 29.7 | **StyleGAN** | `StyleGAN` | [`generative.py`][gen] | Karras et al. (2019) | 建議 |
-| 29.10 | **Diffusion-Model** 🌟 | `diffusion_model` | [`diffusion.py`][diff] | Sohl-Dickstein et al. (2015) | 高優先級 |
-| 29.11 | **DDPM** 🌟 | `DDPM` | [`diffusion.py`][diff] | Ho et al. (2020) | 高優先級 |
-| 29.14 | **Stable-Diffusion** 🌟 | `stable_diffusion` | [`diffusion.py`][diff] | Rombach et al. (2022) | 高優先級 |
-| 29.16 | **CLIP** | `CLIP` | [`multimodal.py`][mm] | Radford et al. (2021) | 建議 |
-| 30.1 | Vision-Transformer | `ViT` | [`vision_models.py`][vis] | Dosovitskiy et al. (2020) | 建議 |
-| 30.3 | **DALL-E-Architecture** 🌟 | `dalle` | [`multimodal.py`][mm] | Ramesh et al. (2021) | 建議 |
-| 30.7 | Image-Captioning | `image_caption` | [`multimodal.py`][mm] | - | 建議 |
-| 30.8 | Visual-Question-Answering | `vqa` | [`multimodal.py`][mm] | - | 建議 |
-| 34.1 | **LIME** 🌟 | `LIME` | [`explainable_ai.py`][xai] | Ribeiro et al. (2016) | 建議 |
-| 34.2 | **SHAP** 🌟 | `SHAP` | [`explainable_ai.py`][xai] | Lundberg & Lee (2017) | 建議 |
-| 34.3 | Grad-CAM | `grad_cam` | [`explainable_ai.py`][xai] | Selvaraju et al. (2017) | 建議 |
-| 34.4 | Integrated-Gradients | `integrated_gradients` | [`explainable_ai.py`][xai] | Sundararajan et al. (2017) | 建議 |
-| 31.2 | **SimCLR** | `simclr` | [`ssl.py`][ssl] | Chen et al. (2020) | 建議 |
-| 32.1 | **MAML** 🌟 | `MAML` | [`meta_learning.py`][meta] | Finn et al. (2017) | 建議 |
-| 33.3 | **DARTS** | `DARTS` | [`nas.py`][nas] | Liu et al. (2018) | 建議 |
-| 35.1 | **Federated-Averaging** 🌟 | `federated_averaging` | [`federated.py`][fed] | McMahan et al. (2017) | 建議 |
+| **Figure** | **Name (in 4<sup>th</sup> edition)** | **Name (in repository)** | **Category** | **File** | **Tests** | **Notebook**
+|:-------|:----------------------------------|:------------------------------|:------------|:--------------------------------|:-----|:---------|
+| 2      | Random-Vacuum-Agent               | `RandomVacuumAgent`           | Agents | [`agents.py`][agents]           | Done | Included |
+| 2      | Model-Based-Vacuum-Agent          | `ModelBasedVacuumAgent`       | Agents | [`agents.py`][agents]           | Done | Included |
+| 2.1    | Environment                       | `Environment`                 | Agents | [`agents.py`][agents]           | Done | Included |
+| 2.1    | Agent                             | `Agent`                       | Agents | [`agents.py`][agents]           | Done | Included |
+| 2.3    | Table-Driven-Vacuum-Agent         | `TableDrivenVacuumAgent`      | Agents | [`agents.py`][agents]           | Done | Included |
+| 2.7    | Table-Driven-Agent                | `TableDrivenAgent`            | Agents | [`agents.py`][agents]           | Done | Included |
+| 2.8    | Reflex-Vacuum-Agent               | `ReflexVacuumAgent`           | Agents | [`agents.py`][agents]           | Done | Included |
+| 2.10   | Simple-Reflex-Agent               | `SimpleReflexAgent`           | Agents | [`agents.py`][agents]           | Done | Included |
+| 2.12   | Model-Based-Reflex-Agent          | `ReflexAgentWithState`        | Agents | [`agents.py`][agents]           | Done | Included |
+| 3      | Problem                           | `Problem`                     | Search | [`search.py`][search]           | Done | Included |
+| 3      | Node                              | `Node`                        | Search | [`search.py`][search]           | Done | Included |
+| 3      | Queue                             | `Queue`                       | Search | [`utils.py`][utils]             | Done | No Need  |
+| 3.1    | Simple-Problem-Solving-Agent      | `SimpleProblemSolvingAgent`   | Search | [`search.py`][search]           | Done | Included |
+| 3.2    | Romania                           | `romania`                     | Search | [`search.py`][search]           | Done | Included |
+| 3.7    | Tree-Search                       | `depth/breadth_first_tree_search`                 | Search | [`search.py`][search]           | Done | Included |
+| 3.7    | Graph-Search                      | `depth/breadth_first_graph_search`                | Search | [`search.py`][search]           | Done | Included |
+| 3.11   | Breadth-First-Search              | `breadth_first_graph_search`  | Search | [`search.py`][search]           | Done | Included |
+| 3.14   | Uniform-Cost-Search               | `uniform_cost_search`         | Search | [`search.py`][search]           | Done | Included |
+| 3.17   | Depth-Limited-Search              | `depth_limited_search`        | Search | [`search.py`][search]           | Done | Included |
+| 3.18   | Iterative-Deepening-Search        | `iterative_deepening_search`  | Search | [`search.py`][search]           | Done | Included |
+| 3.22   | Best-First-Search                 | `best_first_graph_search`     | Search | [`search.py`][search]           | Done | Included |
+| 3.24   | A\*-Search                        | `astar_search`                | Search | [`search.py`][search]           | Done | Included |
+| 3.26   | Recursive-Best-First-Search       | `recursive_best_first_search` | Search | [`search.py`][search]           | Done | Included |
+| 4.2    | Hill-Climbing                     | `hill_climbing`               | Search | [`search.py`][search]           | Done | Included |
+| 4.5    | Simulated-Annealing               | `simulated_annealing`         | Search | [`search.py`][search]           | Done | Included |
+| 4.8    | Genetic-Algorithm                 | `genetic_algorithm`           | Search | [`search.py`][search]           | Done | Included |
+| 4.11   | And-Or-Graph-Search               | `and_or_graph_search`         | Search | [`search.py`][search]           | Done | Included |
+| 4.21   | Online-DFS-Agent                  | `online_dfs_agent`            | Search | [`search.py`][search]           | Done | Included |
+| 4.24   | LRTA\*-Agent                      | `LRTAStarAgent`               | Search | [`search.py`][search]           | Done | Included |
+| 5.3    | Minimax-Decision                  | `minimax_decision`            | Games | [`games.py`][games]             | Done | Included |
+| 5.7    | Alpha-Beta-Search                 | `alphabeta_search`            | Games | [`games.py`][games]             | Done | Included |
+| 6      | CSP                               | `CSP`                         | CSP | [`csp.py`][csp]                 | Done | Included |
+| 6.3    | AC-3                              | `AC3`                         | CSP | [`csp.py`][csp]                 | Done | Included |
+| 6.5    | Backtracking-Search               | `backtracking_search`         | CSP | [`csp.py`][csp]                 | Done | Included |
+| 6.8    | Min-Conflicts                     | `min_conflicts`               | CSP | [`csp.py`][csp]                 | Done | Included |
+| 6.11   | Tree-CSP-Solver                   | `tree_csp_solver`             | CSP | [`csp.py`][csp]                 | Done | Included |
+| 7      | KB                                | `KB`                          | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.1    | KB-Agent                          | `KB_AgentProgram`             | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.7    | Propositional Logic Sentence      | `Expr`                        | Logic | [`utils.py`][utils]             | Done | Included |
+| 7.10   | TT-Entails                        | `tt_entails`                  | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.12   | PL-Resolution                     | `pl_resolution`               | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.14   | Convert to CNF                    | `to_cnf`                      | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.15   | PL-FC-Entails?                    | `pl_fc_entails`               | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.17   | DPLL-Satisfiable?                 | `dpll_satisfiable`            | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.18   | WalkSAT                           | `WalkSAT`                     | Logic | [`logic.py`][logic]             | Done | Included |
+| 7.20   | Hybrid-Wumpus-Agent               | `HybridWumpusAgent`           | Logic |                                 |      |          |
+| 7.22   | SATPlan                           | `SAT_plan`                    | Logic | [`logic.py`][logic]             | Done | Included |
+| 9      | Subst                             | `subst`                       | Logic | [`logic.py`][logic]             | Done | Included |
+| 9.1    | Unify                             | `unify`                       | Logic | [`logic.py`][logic]             | Done | Included |
+| 9.3    | FOL-FC-Ask                        | `fol_fc_ask`                  | Logic | [`logic.py`][logic]             | Done | Included |
+| 9.6    | FOL-BC-Ask                        | `fol_bc_ask`                  | Logic | [`logic.py`][logic]             | Done | Included |
+| 10.1   | Air-Cargo-problem                 | `air_cargo`                   | Planning | [`planning.py`][planning]       | Done | Included |
+| 10.2   | Spare-Tire-Problem                | `spare_tire`                  | Planning | [`planning.py`][planning]       | Done | Included |
+| 10.3   | Three-Block-Tower                 | `three_block_tower`           | Planning | [`planning.py`][planning]       | Done | Included |
+| 10.7   | Cake-Problem                      | `have_cake_and_eat_cake_too`  | Planning | [`planning.py`][planning]       | Done | Included |
+| 10.9   | Graphplan                         | `GraphPlan`                   | Planning | [`planning.py`][planning]       | Done | Included |
+| 10.13  | Partial-Order-Planner             | `PartialOrderPlanner`         | Planning | [`planning.py`][planning]       | Done | Included |
+| 11.1   | Job-Shop-Problem-With-Resources   | `job_shop_problem`            | Planning | [`planning.py`][planning]       | Done | Included |
+| 11.5   | Hierarchical-Search               | `hierarchical_search`         | Planning | [`planning.py`][planning]       | Done | Included |
+| 11.8   | Angelic-Search                    | `angelic_search`              | Planning | [`planning.py`][planning]       | Done | Included |
+| 11.10  | Doubles-tennis                    | `double_tennis_problem`       | Planning | [`planning.py`][planning]       | Done | Included |
+| 13     | Discrete Probability Distribution | `ProbDist`                    | Probability | [`probability.py`][probability] | Done | Included |
+| 13.1   | DT-Agent                          | `DTAgent`                     | Probability | [`probability.py`][probability] | Done | Included |
+| 14.9   | Enumeration-Ask                   | `enumeration_ask`             | Probability | [`probability.py`][probability] | Done | Included |
+| 14.11  | Elimination-Ask                   | `elimination_ask`             | Probability | [`probability.py`][probability] | Done | Included |
+| 14.13  | Prior-Sample                      | `prior_sample`                | Probability | [`probability.py`][probability] | Done | Included |
+| 14.14  | Rejection-Sampling                | `rejection_sampling`          | Probability | [`probability.py`][probability] | Done | Included |
+| 14.15  | Likelihood-Weighting              | `likelihood_weighting`        | Probability | [`probability.py`][probability] | Done | Included |
+| 14.16  | Gibbs-Ask                         | `gibbs_ask`                   | Probability | [`probability.py`][probability] | Done | Included |
+| 15.4   | Forward-Backward                  | `forward_backward`            | Probability | [`probability.py`][probability] | Done | Included |
+| 15.6   | Fixed-Lag-Smoothing               | `fixed_lag_smoothing`         | Probability | [`probability.py`][probability] | Done | Included |
+| 15.17  | Particle-Filtering                | `particle_filtering`          | Probability | [`probability.py`][probability] | Done | Included |
+| 16.9   | Information-Gathering-Agent       | `InformationGatheringAgent`   | Probability | [`probability.py`][probability] | Done | Included |
+| 17.4   | Value-Iteration                   | `value_iteration`             | MDP | [`mdp.py`][mdp]                 | Done | Included |
+| 17.7   | Policy-Iteration                  | `policy_iteration`            | MDP | [`mdp.py`][mdp]                 | Done | Included |
+| 17.9   | POMDP-Value-Iteration             | `pomdp_value_iteration`       | MDP | [`mdp.py`][mdp]                 | Done | Included |
+| 18.5   | Decision-Tree-Learning            | `DecisionTreeLearner`         | Learning | [`learning.py`][learning]       | Done | Included |
+| 18.8   | Cross-Validation                  | `cross_validation`            | Learning | [`learning.py`][learning]\*     |      |          |
+| 18.11  | Decision-List-Learning            | `DecisionListLearner`         | Learning | [`learning.py`][learning]\*     |      |          |
+| 18.24  | Back-Prop-Learning                | `BackPropagationLearner`      | Learning | [`learning.py`][learning]       | Done | Included |
+| 18.34  | AdaBoost                          | `AdaBoost`                    | Learning | [`learning.py`][learning]       | Done | Included |
+| 18.35 | **Adam-Optimizer** 🌟 | `Adam` | Deep Learning | [`optimizers.py`][opt] | Kingma & Ba (2014) | 建議 |
+| 19.2   | Current-Best-Learning             | `current_best_learning`       | Knowledge | [`knowledge.py`](knowledge.py)  | Done | Included |
+| 19.3   | Version-Space-Learning            | `version_space_learning`      | Knowledge | [`knowledge.py`](knowledge.py)  | Done | Included |
+| 19.8   | Minimal-Consistent-Det            | `minimal_consistent_det`      | Knowledge | [`knowledge.py`](knowledge.py)  | Done | Included |
+| 19.12  | FOIL                              | `FOIL_container`              | Knowledge | [`knowledge.py`](knowledge.py)  | Done | Included |
+| 21.2   | Passive-ADP-Agent                 | `PassiveADPAgent`             | Reinforcement Learning | [`rl.py`][rl]                   | Done | Included |
+| 21.4   | Passive-TD-Agent                  | `PassiveTDAgent`              | Reinforcement Learning | [`rl.py`][rl]                   | Done | Included |
+| 21.8   | Q-Learning-Agent                  | `QLearningAgent`              | Reinforcement Learning | [`rl.py`][rl]                   | Done | Included |
+| 21.9 | **Deep-Q-Network (DQN)** 🌟 | `DQN` | Deep RL | [`deep_rl.py`][drl] | Mnih et al. (2015) | 高優先級 |
+| 21.12 | Double-DQN | `double_dqn` | Deep RL | [`deep_rl.py`][drl] | van Hasselt et al. (2015) | 建議 |
+| 21.15 | **Policy-Gradient** 🌟 | `policy_gradient` | Deep RL | [`deep_rl.py`][drl] | Sutton et al. (2000) | 高優先級 |
+| 21.18 | **A3C** | `A3C` | Deep RL | [`deep_rl.py`][drl] | Mnih et al. (2016) | 建議 |
+| 21.19 | **PPO** 🌟 | `PPO` | Deep RL | [`deep_rl.py`][drl] | Schulman et al. (2017) | 高優先級 |
+| 21.21 | Soft-Actor-Critic | `SAC` | Deep RL | [`deep_rl.py`][drl] | Haarnoja et al. (2018) | 建議 |
+| 21.22 | **AlphaZero-MCTS** 🌟 | `alphazero_mcts` | Deep RL | [`games_rl.py`][grl] | Silver et al. (2017) | 高優先級 |
+| 22.1   | HITS                              | `HITS`                        | NLP | [`nlp.py`][nlp]                 | Done | Included |
+| 23     | Chart-Parse                       | `Chart`                       | NLP | [`nlp.py`][nlp]                 | Done | Included |
+| 23.5   | CYK-Parse                         | `CYK_parse`                   | NLP | [`nlp.py`][nlp]                 | Done | Included |
+| 23.6 | **Word2Vec** 🌟 | `word2vec` | NLP | [`embeddings.py`][emb] | Mikolov et al. (2013) | 建議 |
+| 23.9 | **GloVe** | `glove` | NLP | [`embeddings.py`][emb] | Pennington et al. (2014) | 建議 |
+| 23.11 | **ELMo** | `elmo` | NLP | [`embeddings.py`][emb] | Peters et al. (2018) | 建議 |
+| 23.13 | **Tokenization-BPE** | `bpe_tokenizer` | NLP | [`tokenizers.py`][tok] | Sennrich et al. (2016) | 建議 |
+| 24.9 | **YOLO** 🌟 | `YOLO` | Vision | [`object_detection.py`][od] | Redmon et al. (2016) | 高優先級 |
+| 24.12 | Faster-R-CNN | `faster_rcnn` | Vision | [`object_detection.py`][od] | Ren et al. (2015) | 建議 |
+| 24.13 | **Mask-R-CNN** 🌟 | `mask_rcnn` | Vision | [`segmentation.py`][seg] | He et al. (2017) | 建議 |
+| 24.16 | **U-Net** | `unet` | Vision | [`segmentation.py`][seg] | Ronneberger et al. (2015) | 建議 |
+| 25.9   | Monte-Carlo-Localization          | `monte_carlo_localization`    | Robotics | [`probability.py`][probability] | Done | Included |
+| 26.1 | Convolutional-Neural-Network | `CNN` | Deep Learning | [`deep_learning.py`][dl] | LeCun (1998) | 建議 |
+| 26.6 | **ResNet-Block** 🌟 | `residual_block` | Deep Learning | [`deep_learning.py`][dl] | He et al. (2015) | 建議 |
+| 27.6 | **Scaled-Dot-Product-Attention** 🌟 | `scaled_dot_product_attention` | Deep Learning | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 |
+| 27.7 | **Multi-Head-Attention** 🌟 | `multi_head_attention` | Deep Learning | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 |
+| 27.8 | **Transformer-Encoder** 🌟 | `transformer_encoder` | Deep Learning | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 |
+| 27.9 | **Transformer-Decoder** 🌟 | `transformer_decoder` | Deep Learning | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 |
+| 28.1 | **BERT-Pretraining** 🌟 | `bert_pretrain` | LLM | [`language_models.py`][lm] | Devlin et al. (2018) | 高優先級 |
+| 28.4 | **GPT-Architecture** 🌟 | `gpt_model` | LLM | [`language_models.py`][lm] | Radford et al. (2018) | 高優先級 |
+| 28.8 | **Few-Shot-Learning** 🌟 | `few_shot_learning` | LLM | [`language_models.py`][lm] | Brown et al. (2020) | 高優先級 |
+| 28.10 | **Chain-of-Thought-Prompting** | `chain_of_thought` | LLM | [`language_models.py`][lm] | Wei et al. (2022) | 建議 |
+| 28.11 | **RLHF** 🌟 | `rlhf` | LLM | [`language_models.py`][lm] | Christiano et al. (2017) | 建議 |
+| 28.13 | **Retrieval-Augmented-Generation** | `rag` | LLM | [`language_models.py`][lm] | Lewis et al. (2020) | 建議 |
+| 29.2 | Variational-Autoencoder | `VAE` | Generative AI | [`generative.py`][gen] | Kingma & Welling (2013) | 建議 |
+| 29.4 | **GAN-Architecture** 🌟 | `GAN` | Generative AI | [`generative.py`][gen] | Goodfellow et al. (2014) | 高優先級 |
+| 29.7 | **StyleGAN** | `StyleGAN` | Generative AI | [`generative.py`][gen] | Karras et al. (2019) | 建議 |
+| 29.10 | **Diffusion-Model** 🌟 | `diffusion_model` | Generative AI | [`diffusion.py`][diff] | Sohl-Dickstein et al. (2015) | 高優先級 |
+| 29.11 | **DDPM** 🌟 | `DDPM` | Generative AI | [`diffusion.py`][diff] | Ho et al. (2020) | 高優先級 |
+| 29.14 | **Stable-Diffusion** 🌟 | `stable_diffusion` | Generative AI | [`diffusion.py`][diff] | Rombach et al. (2022) | 高優先級 |
+| 29.16 | **CLIP** | `CLIP` | Multimodal | [`multimodal.py`][mm] | Radford et al. (2021) | 建議 |
+| 30.1 | Vision-Transformer | `ViT` | Vision | [`vision_models.py`][vis] | Dosovitskiy et al. (2020) | 建議 |
+| 30.3 | **DALL-E-Architecture** 🌟 | `dalle` | Multimodal | [`multimodal.py`][mm] | Ramesh et al. (2021) | 建議 |
+| 30.7 | Image-Captioning | `image_caption` | Multimodal | [`multimodal.py`][mm] | - | 建議 |
+| 30.8 | Visual-Question-Answering | `vqa` | Multimodal | [`multimodal.py`][mm] | - | 建議 |
+| 34.1 | **LIME** 🌟 | `LIME` | Explainable AI | [`explainable_ai.py`][xai] | Ribeiro et al. (2016) | 建議 |
+| 34.2 | **SHAP** 🌟 | `SHAP` | Explainable AI | [`explainable_ai.py`][xai] | Lundberg & Lee (2017) | 建議 |
+| 34.3 | Grad-CAM | `grad_cam` | Explainable AI | [`explainable_ai.py`][xai] | Selvaraju et al. (2017) | 建議 |
+| 34.4 | Integrated-Gradients | `integrated_gradients` | Explainable AI | [`explainable_ai.py`][xai] | Sundararajan et al. (2017) | 建議 |
+| 31.2 | **SimCLR** | `simclr` | Self-Supervised | [`ssl.py`][ssl] | Chen et al. (2020) | 建議 |
+| 32.1 | **MAML** 🌟 | `MAML` | Meta-Learning | [`meta_learning.py`][meta] | Finn et al. (2017) | 建議 |
+| 33.3 | **DARTS** | `DARTS` | AutoML | [`nas.py`][nas] | Liu et al. (2018) | 建議 |
+| 35.1 | **Federated-Averaging** 🌟 | `federated_averaging` | Federated Learning | [`federated.py`][fed] | McMahan et al. (2017) | 建議 |
 ---
 
 ## 🚀 Future Algorithms (建議未來版本新增)
