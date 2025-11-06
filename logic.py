@@ -1,13 +1,14 @@
 """
 Representations and Inference for Logic. (Chapters 7-9, 12)
 
-Covers both Propositional and First-Order Logic. First we have four
+Covers both Propositional and First-Order Logic. First we have five
 important data types:
 
     KB            Abstract class holds a knowledge base of logical expressions
     KB_Agent      Abstract class subclasses agents.Agent
     Expr          A logical expression, imported from utils.py
     substitution  Implemented as a dictionary of var:value pairs, {x:1, y:x}
+    Proof         A class to represent a sequence of logical inference steps
 
 Be careful: some functions take an Expr as argument, and some take a KB.
 
@@ -104,6 +105,59 @@ class PropKB(KB):
         for c in conjuncts(to_cnf(sentence)):
             if c in self.clauses:
                 self.clauses.remove(c)
+
+
+# ______________________________________________________________________________
+
+
+class Proof:
+    """A Proof represents a sequence of logical inference steps.
+    Each step includes a sentence and its justification.
+    
+    Example:
+    >>> proof = Proof(goal=expr('Q'))
+    >>> proof.add_step(expr('P'), 'Premise')
+    >>> proof.add_step(expr('P ==> Q'), 'Premise')
+    >>> proof.add_step(expr('Q'), 'Modus Ponens')
+    >>> proof.is_complete()
+    True
+    """
+
+    def __init__(self, goal=None):
+        """Initialize a proof, optionally with a goal to prove."""
+        self.steps = []
+        self.goal = goal
+
+    def add_step(self, sentence, justification=''):
+        """Add a step to the proof with its justification.
+        
+        Args:
+            sentence: A logical sentence (Expr)
+            justification: String explaining why this step is valid
+        """
+        self.steps.append({'sentence': sentence, 'justification': justification})
+
+    def __repr__(self):
+        """Return a string representation of the proof."""
+        lines = []
+        if self.goal:
+            lines.append(f"Goal: {self.goal}")
+            lines.append("Proof:")
+        for i, step in enumerate(self.steps, 1):
+            lines.append(f"  {i}. {step['sentence']}")
+            if step['justification']:
+                lines.append(f"     ({step['justification']})")
+        return '\n'.join(lines)
+
+    def is_complete(self):
+        """Check if the proof reaches its goal.
+        
+        Note: This uses syntactic equality, not semantic equivalence.
+        For example, 'P & Q' and 'Q & P' are considered different.
+        """
+        if not self.goal or not self.steps:
+            return False
+        return self.steps[-1]['sentence'] == self.goal
 
 
 # ______________________________________________________________________________
