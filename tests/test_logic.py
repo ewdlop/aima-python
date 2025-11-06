@@ -385,5 +385,35 @@ def test_SAT_plan():
     assert SAT_plan((0, 0), transition, (1, 1), 4) == ['Right', 'Down']
 
 
+def test_proof():
+    """Test the Proof class for representing logical proofs."""
+    # Create a simple proof
+    proof = Proof(goal=expr('Q'))
+    
+    # Add steps to the proof
+    proof.add_step(expr('P'), 'Premise')
+    proof.add_step(expr('P ==> Q'), 'Premise')
+    proof.add_step(expr('Q'), 'Modus Ponens on 1 and 2')
+    
+    # Check that proof is complete
+    assert proof.is_complete()
+    
+    # Check string representation contains goal and steps
+    proof_str = repr(proof)
+    assert 'Goal: Q' in proof_str
+    assert 'P' in proof_str
+    assert '(P ==> Q)' in proof_str
+    
+    # Test proof without goal
+    proof2 = Proof()
+    proof2.add_step(expr('A & B'), 'Premise')
+    proof2.add_step(expr('A'), 'Conjunction elimination')
+    assert not proof2.is_complete()  # No goal set
+    
+    # Test empty proof
+    proof3 = Proof(goal=expr('X'))
+    assert not proof3.is_complete()  # No steps
+
+
 if __name__ == '__main__':
     pytest.main()
