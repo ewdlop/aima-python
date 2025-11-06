@@ -150,7 +150,11 @@ class Proof:
         return '\n'.join(lines)
 
     def is_complete(self):
-        """Check if the proof reaches its goal."""
+        """Check if the proof reaches its goal.
+        
+        Note: This uses syntactic equality, not semantic equivalence.
+        For example, 'P & Q' and 'Q & P' are considered different.
+        """
         if not self.goal or not self.steps:
             return False
         return self.steps[-1]['sentence'] == self.goal
