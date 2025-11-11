@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+huggingface-hub
+gradio
+fastmcp
+numpy
+aima

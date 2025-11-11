@@ -2,6 +2,9 @@
 
 # `aima-python` [![Build Status](https://travis-ci.org/aimacode/aima-python.svg?branch=master)](https://travis-ci.org/aimacode/aima-python) [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/aimacode/aima-python)
 
+> ⚠️ **人工智慧生成內容聲明**  
+> 本 README 部分段落（特別是中文說明與歷史摘要）由人工智慧協助撰寫或潤飾，僅供參考。實際資訊仍以原始資料與官方文件為準，請在引用或修改時自行驗證內容。
+
 
 Python code for the book *[Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu).* You can use this in conjunction with a course on AI, or for study on your own. We're looking for [solid contributors](https://github.com/aimacode/aima-python/blob/master/CONTRIBUTING.md) to help.
 

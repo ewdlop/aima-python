@@ -17,6 +17,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or get_settings()
 
     app = FastAPI(
+        docs_url="/docs",
         title=settings.app_name,
         version=settings.version,
         summary="AIMA Online API powered by FastAPI.",

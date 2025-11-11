@@ -11,6 +11,9 @@ license: apache-2.0
 ---
 # AIMA Online
 
+> ⚠️ **人工智慧生成內容聲明**  
+> 本 README 部分段落（特別是中文說明與歷史摘要）由人工智慧協助撰寫或潤飾，僅供參考。實際資訊仍以原始資料與官方文件為準，請在引用或修改時自行驗證內容。
+
 這個範例（暫名 **aima-online**）展示如何使用 FastAPI 與 FastMCP 建立 AIMA 演算法示範服務，並提供 Hugging Face Space 的部署流程，同時整合 Gradio 介面與 Hugging Face API 工具。
 
 > ⚠️ **專案聲明**  
@@ -24,7 +27,7 @@ license: apache-2.0
 python -m venv .venv
 .venv\Scripts\activate      # Windows
 pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
+uvicorn app.app:app --reload --port 8000
 ```
 
 -啟動後可透過：

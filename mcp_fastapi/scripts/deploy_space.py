@@ -90,7 +90,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--ignore",
         nargs="*",
-        default=[".venv", "__pycache__", "*.pyc", ".git", "tests"],
+        default=[".venv*", "__pycache__", "*.pyc", ".git", "tests"],
         help="上傳時忽略的檔案/目錄 pattern。",
     )
     return parser.parse_args()
@@ -153,7 +153,7 @@ def main() -> None:
         )
 
     print(f"⬆️  上傳資料夾 {local_dir} 至 Space（忽略：{args.ignore}）")
-    upload_folder(
+    api.upload_folder(
         repo_id=repo_id,
         repo_type="space",
         folder_path=str(local_dir),

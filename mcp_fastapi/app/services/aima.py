@@ -3,10 +3,8 @@
 from __future__ import annotations
 
 import json
-import sys
 from dataclasses import dataclass
 from functools import lru_cache
-from pathlib import Path
 from typing import Any, Callable
 
 from ..schemas import (
@@ -17,15 +15,11 @@ from ..schemas import (
     RomaniaSearchAlgorithm,
 )
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
-
 try:  # pragma: no cover - import validation
-    import search  # type: ignore
-    import csp  # type: ignore
+    from aima import csp  # type: ignore
+    from aima import search  # type: ignore
 except ModuleNotFoundError as exc:  # pragma: no cover
-    raise RuntimeError("無法匯入 AIMA 模組，請確認專案根目錄設定。") from exc
+    raise RuntimeError("無法匯入 aima 套件，請確認已安裝並可由 Python 環境存取。") from exc
 
 ROMANIA_CITIES: tuple[str, ...] = tuple(sorted(search.romania_map.locations.keys()))
 
