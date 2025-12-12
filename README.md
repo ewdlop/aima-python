@@ -302,7 +302,7 @@ And you are good to go!
 
 Here is a table of algorithms, the figure, name of the algorithm in the book and in the repository, and the file where they are implemented in the repository. This chart was made for the third edition of the book and is being updated for the upcoming fourth edition. Empty implementations are a good place for contributors to look for an issue. The [aima-pseudocode](https://github.com/aimacode/aima-pseudocode) project describes all the algorithms from the book. An asterisk next to the file name denotes the algorithm is not fully implemented. Another great place for contributors to start is by adding tests and writing on the notebooks. You can see which algorithms have tests and notebook sections below. If the algorithm you want to work on is covered, don't worry! You can still add more tests and provide some examples of use in the notebook!
 
-| **Figure** | **Name (in 4<sup>th</sup> edition)** | **Name (in repository)** | **Category** | **File** | **Tests** | **Notebook**
+| **Figure** | **Name (in 4<sup>th</sup> edition)** | **Name (in repository)** | **Category** | **File** | **Tests** | **Notebook** |
 |:-------|:----------------------------------|:------------------------------|:------------|:--------------------------------|:-----|:---------|
 | 2      | Random-Vacuum-Agent               | `RandomVacuumAgent`           | Agents | [`agents.py`][agents]           | Done | Included |
 | 2      | Model-Based-Vacuum-Agent          | `ModelBasedVacuumAgent`       | Agents | [`agents.py`][agents]           | Done | Included |
@@ -490,24 +490,24 @@ Here is a table of algorithms, the figure, name of the algorithm in the book and
 
 ### 深度學習與 Transformer
 
-| **Figure** | **Name** | **Name (in repository)** | **File** | **Pioneer** | **Status** |
-|:-----------|:---------|:-------------------------|:---------|:------------|:-----------|
-| 26.1 | Convolutional-Neural-Network | `CNN` | [`deep_learning.py`][dl] | LeCun (1998) | 建議 |
-| 26.2 | Conv-Layer-Forward-Pass | `conv_forward` | [`deep_learning.py`][dl] | - | 建議 |
-| 26.3 | Max-Pooling | `max_pooling` | [`deep_learning.py`][dl] | - | 建議 |
-| 26.4 | Batch-Normalization | `batch_norm` | [`deep_learning.py`][dl] | Ioffe & Szegedy (2015) | 建議 |
-| 26.5 | Dropout-Regularization | `dropout` | [`deep_learning.py`][dl] | Hinton et al. (2012) | 建議 |
-| 26.6 | **ResNet-Block** 🌟 | `residual_block` | [`deep_learning.py`][dl] | He et al. (2015) | 建議 |
-| 26.8 | DenseNet-Block | `dense_block` | [`deep_learning.py`][dl] | Huang et al. (2017) | 建議 |
-| 27.1 | Recurrent-Neural-Network | `RNN` | [`sequence_models.py`][seq] | Rumelhart (1986) | 建議 |
-| 27.2 | LSTM-Cell | `LSTM` | [`sequence_models.py`][seq] | Hochreiter (1997) | 建議 |
-| 27.3 | GRU-Cell | `GRU` | [`sequence_models.py`][seq] | Cho et al. (2014) | 建議 |
-| 27.5 | Attention-Mechanism | `attention` | [`attention.py`][attn] | Bahdanau et al. (2015) | 建議 |
-| 27.6 | **Scaled-Dot-Product-Attention** 🌟 | `scaled_dot_product_attention` | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 |
-| 27.7 | **Multi-Head-Attention** 🌟 | `multi_head_attention` | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 |
-| 27.8 | **Transformer-Encoder** 🌟 | `transformer_encoder` | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 |
-| 27.9 | **Transformer-Decoder** 🌟 | `transformer_decoder` | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 |
-| 27.10 | Positional-Encoding | `positional_encoding` | [`transformers.py`][trans] | - | 建議 |
+| **Figure** | **Name** | **Name (in repository)** | **File** | **Pioneer** | **Status** | **Nature Language** |
+|:-----------|:---------|:-------------------------|:---------|:------------|:-----------||
+| 26.1 | Convolutional-Neural-Network | `CNN` | [`deep_learning.py`][dl] | LeCun (1998) | 建議 ||
+| 26.2 | Conv-Layer-Forward-Pass | `conv_forward` | [`deep_learning.py`][dl] | - | 建議 ||
+| 26.3 | Max-Pooling | `max_pooling` | [`deep_learning.py`][dl] | - | 建議 ||
+| 26.4 | Batch-Normalization | `batch_norm` | [`deep_learning.py`][dl] | Ioffe & Szegedy (2015) | 建議 ||
+| 26.5 | Dropout-Regularization | `dropout` | [`deep_learning.py`][dl] | Hinton et al. (2012) | 建議 ||
+| 26.6 | **ResNet-Block** 🌟 | `residual_block` | [`deep_learning.py`][dl] | He et al. (2015) | 建議 ||
+| 26.8 | DenseNet-Block | `dense_block` | [`deep_learning.py`][dl] | Huang et al. (2017) | 建議 ||
+| 27.1 | Recurrent-Neural-Network | `RNN` | [`sequence_models.py`][seq] | Rumelhart (1986) | 建議 | Electrochemistry |
+| 27.2 | LSTM-Cell | `LSTM` | [`sequence_models.py`][seq] | Hochreiter (1997) | 建議 ||
+| 27.3 | GRU-Cell | `GRU` | [`sequence_models.py`][seq] | Cho et al. (2014) | 建議 ||
+| 27.5 | Attention-Mechanism | `attention` | [`attention.py`][attn] | Bahdanau et al. (2015) | 建議 ||
+| 27.6 | **Scaled-Dot-Product-Attention** 🌟 | `scaled_dot_product_attention` | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 ||
+| 27.7 | **Multi-Head-Attention** 🌟 | `multi_head_attention` | [`attention.py`][attn] | Vaswani et al. (2017) | 高優先級 ||
+| 27.8 | **Transformer-Encoder** 🌟 | `transformer_encoder` | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 ||
+| 27.9 | **Transformer-Decoder** 🌟 | `transformer_decoder` | [`transformers.py`][trans] | Vaswani et al. (2017) | 高優先級 ||
+| 27.10 | Positional-Encoding | `positional_encoding` | [`transformers.py`][trans] | - | 建議 ||
 
 ### 大型語言模型
 
