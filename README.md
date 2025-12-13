@@ -490,7 +490,7 @@ Here is a table of algorithms, the figure, name of the algorithm in the book and
 
 ### 深度學習與 Transformer
 
-| **Figure** | **Name** | **Name (in repository)** | **File** | **Pioneer** | **Status** | **现实** |
+| **Figure** | **Name** | **Name (in repository)** | **File** | **Pioneer** | **Status** | **实现** |
 |:-----------|:---------|:-------------------------|:---------|:------------|:-----------|:-----------|
 | 26.1 | Convolutional-Neural-Network | `CNN` | [`deep_learning.py`][dl] | LeCun (1998) | 建議 ||
 | 26.2 | Conv-Layer-Forward-Pass | `conv_forward` | [`deep_learning.py`][dl] | - | 建議 ||
