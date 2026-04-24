@@ -10,6 +10,9 @@ from typing import Any, Callable
 from ..schemas import (
     NQueensRequest,
     NQueensResponse,
+    RomaniaCityNode,
+    RomaniaGraphResponse,
+    RomaniaRoadEdge,
     RomaniaRouteRequest,
     RomaniaRouteResponse,
     RomaniaSearchAlgorithm,
@@ -83,6 +86,38 @@ def solve_romania_route(payload: RomaniaRouteRequest) -> RomaniaRouteResponse:
         total_cost=summary.cost,
         explored_steps=summary.explored_steps,
     )
+
+
+def get_romania_graph() -> RomaniaGraphResponse:
+    """Return Romania map nodes (with coordinates) and unique undirected edges."""
+    g = search.romania_map
+    locations: dict[str, Any] = getattr(g, "locations", {}) or {}
+
+    nodes: list[RomaniaCityNode] = []
+    for name in sorted(locations.keys()):
+        xy = locations.get(name)
+        if isinstance(xy, (tuple, list)) and len(xy) >= 2:
+            nodes.append(RomaniaCityNode(name=name, x=float(xy[0]), y=float(xy[1])))
+        else:
+            nodes.append(RomaniaCityNode(name=name))
+
+    seen: set[tuple[str, str]] = set()
+    edges: list[RomaniaRoadEdge] = []
+    graph_dict: dict[str, dict[str, Any]] = getattr(g, "graph_dict", {}) or {}
+    for a, nbrs in graph_dict.items():
+        for b, cost in nbrs.items():
+            key = tuple(sorted((a, b)))
+            if key in seen:
+                continue
+            seen.add(key)
+            try:
+                c = float(cost)
+            except (TypeError, ValueError):
+                c = float("nan")
+            edges.append(RomaniaRoadEdge(a=key[0], b=key[1], cost=c))
+
+    edges.sort(key=lambda e: (e.a, e.b))
+    return RomaniaGraphResponse(nodes=nodes, edges=edges)
 
 
 @lru_cache

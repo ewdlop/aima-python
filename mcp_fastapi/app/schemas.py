@@ -39,6 +39,44 @@ class RomaniaRouteResponse(BaseModel):
     explored_steps: int
 
 
+class RomaniaCityNode(BaseModel):
+    """One city on the Romania map with optional layout coordinates."""
+
+    name: str
+    x: float | None = Field(default=None, description="圖上 x 座標（教材用示意）。")
+    y: float | None = Field(default=None, description="圖上 y 座標（教材用示意）。")
+
+
+class RomaniaRoadEdge(BaseModel):
+    """Undirected road between two cities (deduplicated for API output)."""
+
+    a: str
+    b: str
+    cost: float
+
+
+class RomaniaGraphResponse(BaseModel):
+    """Nodes and edges of the Romania road map."""
+
+    nodes: list[RomaniaCityNode]
+    edges: list[RomaniaRoadEdge]
+
+
+class RomaniaCatalogResponse(BaseModel):
+    """Discover Romania route API capabilities."""
+
+    cities: list[str]
+    search_algorithms: list[str]
+
+
+class NQueensCatalogResponse(BaseModel):
+    """Discover N-Queens API capabilities."""
+
+    algorithms: list[str]
+    n_min: int = 4
+    n_max: int = 25
+
+
 class NQueensAlgorithm(str, Enum):
     """Supported algorithms for N-Queens solver."""
 
@@ -67,7 +105,10 @@ class NQueensResponse(BaseModel):
     algorithm: NQueensAlgorithm
     assignments: list[int]
     is_solution: bool
-    raw: dict[str, int] | None = None
+    raw: dict[int, int] | None = Field(
+        default=None,
+        description="CSP 求解器回傳的原始指派：鍵為欄位（整數），值為該欄皇后所在列。",
+    )
 
 
 class HFTextGenerationRequest(BaseModel):

@@ -117,12 +117,21 @@ uvicorn app.app:app --reload --port 8000
 
 `scripts/deploy_space.py` 透過 Hugging Face API 自動建立/更新 Space 並上傳專案檔案。確保已安裝 `huggingface-hub` 並登入或提供 token。
 
+在 `mcp_fastapi` 目錄下執行（請把 `your-username/mcp-fastapi` 換成你的 Space，例如 `ewdlop/aima_space`）。`--token` 可改用環境變數 `HF_TOKEN` / `HUGGINGFACE_TOKEN` / `MCP_HF_API_TOKEN`，避免把權杖寫進指令列紀錄。
+
 ```bash
 python scripts/deploy_space.py \
   --repo-id your-username/mcp-fastapi \
   --token hf_xxx \
   --space-sdk docker \
-  --space-hardware cpu-basic
+  --space-hardware cpu-basic \
+  --yes
+```
+
+Windows PowerShell 請用單行（或行尾加 **反引號** `` ` `` 再接下一行），不要用 bash 的 `\`：
+
+```powershell
+python scripts/deploy_space.py --repo-id your-username/mcp-fastapi --token hf_xxx --space-sdk docker --space-hardware cpu-basic --yes
 ```
 
 常用參數：

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 from gradio.routes import mount_gradio_app
@@ -43,6 +43,10 @@ mount_gradio_app(app, build_gradio_app(), path="/gradio")
 
 
 @app.get("/", include_in_schema=False)
-async def root_redirect() -> RedirectResponse:
+async def root_redirect(request: Request) -> RedirectResponse:
     """Redirect root to the Gradio interface."""
-    return RedirectResponse(url="/gradio")
+    query = str(request.url.query)
+    target = "/gradio/"
+    if query:
+        target = f"{target}?{query}"
+    return RedirectResponse(url=target)
